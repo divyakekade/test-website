@@ -1,0 +1,12 @@
+.home{
+    width:80vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* @media screen and (max-width=545) {
+    .home{
+        display:block;
+    }
+} */
