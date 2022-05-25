@@ -20,6 +20,9 @@
     justify-content: center;
     cursor: pointer;;
 }
+.inner-box-white:hover{
+    font-size: 18px;
+}
 h4{
     font-family: Verdana;
     font-weight: bold;

@@ -10,3 +10,7 @@
     box-shadow: 2px 2px 4px gray;
     cursor: pointer;
 }
+.button:hover{
+    font-size: 20px;
+    background-color: rgb(17, 10, 52);
+}

@@ -22,7 +22,7 @@ export default function StudentLogin(){
     return(
         <div className="component-box">
             <div className="options-box">
-                <span className>
+                <span>
                     <div onClick={changeButtonToSignup}>{changeColor1}</div>
                 </span>
                 <span>
@@ -31,7 +31,7 @@ export default function StudentLogin(){
             </div>
             <input type="text" placeholder="email" className="login-input"></input>
             <input type="password" placeholder="password" className="login-input"></input>
-            <BlueButton title={button} />
+            <BlueButton className="button" title={button} />
             <a href="" className="forgot-pasword">Forgot Password?</a>
         </div>
     )
