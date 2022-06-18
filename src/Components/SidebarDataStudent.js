@@ -1,0 +1,22 @@
+export default [
+    {
+        id:1,
+        name:"Dashboard"
+    },
+    {
+        id:2,
+        name:"Profile"
+    },
+    {
+        id:3,
+        name:"Notes"
+    },
+    {
+        id:4,
+        name:"Exams"
+    },
+    {
+        id:5,
+        name:"Results"
+    }
+]

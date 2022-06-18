@@ -1,0 +1,26 @@
+.list-item{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #282b77;
+    color: white;
+    padding: 15px;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.sidebar-options{
+    padding: 3vh 0px;
+    font-family: 'Verdana';
+    font-size: 20px;
+}
+/* .icon{
+    height: 2%;
+    width: 2%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+} */
+/* li{
+    list-style: none;
+    padding: 15px;
+} */

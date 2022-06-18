@@ -3,9 +3,31 @@
     width: 100%;
     box-shadow: 0px 2px 6px gray;
     border: none;
-    background-color: #282b77;
+    background-color: white;
     padding: 0;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    margin: 0;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    position:fixed;
+}
+.right-part{
+    display: flex;
+    align-items: center;
+    margin-right: 1vw;
+}
+.menu-icon{
+    margin-left: 1vw;
+}
+.dropdown-icon{
+    margin-left: 1vw;
+}
+.profile-icon{
+    margin-right: 0.5vw;
+}
+.logout-icon{
+    margin-left: 1vw;
+}
+h4{
+    font-family: Verdana;
 }

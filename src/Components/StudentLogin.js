@@ -29,9 +29,11 @@ export default function StudentLogin(){
                     <div onClick={changeButtonToLogin}>{changeColor2}</div>
                 </span>
             </div>
+            <form className="form">
             <input type="text" placeholder="email" className="login-input"></input>
             <input type="password" placeholder="password" className="login-input"></input>
             <BlueButton className="button" title={button} />
+            </form>
             <a href="" className="forgot-pasword">Forgot Password?</a>
         </div>
     )
