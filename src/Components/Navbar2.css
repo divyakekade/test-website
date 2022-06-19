@@ -1,3 +1,4 @@
+
 .navbar2{
     height:8vh;
     width: 100%;
@@ -18,16 +19,24 @@
 }
 .menu-icon{
     margin-left: 1vw;
+    cursor: pointer;
 }
-.dropdown-icon{
-    margin-left: 1vw;
-}
+
 .profile-icon{
     margin-right: 0.5vw;
 }
 .logout-icon{
     margin-left: 1vw;
+    cursor: pointer;
 }
 h4{
     font-family: Verdana;
+}
+.sidebar{
+    transform:translateX(-100%);
+    transition: all 0.4s;
+}
+.sidebar-active{
+    transform:translateX(0%);
+    transition: 350ms;
 }

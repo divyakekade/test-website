@@ -1,15 +1,15 @@
+import React from "react";
 import "./Signup.css";
 import Navbar from "../Components/Navbar"
+import SignupLogin from "../Components/SignupLogin";
 
 function Signup (){
     return(
-        <div className="home">
-        <div className="home">
-        <Navbar />
-        </div>
-        <div className="h1">
-        <h1>Signup page</h1>
-        </div>
+        <div className="signup-page">
+            <Navbar/>
+            <div className="img-div">
+                <SignupLogin/>
+            </div>
         </div>
     )
 }

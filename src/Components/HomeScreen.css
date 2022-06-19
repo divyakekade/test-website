@@ -1,9 +1,14 @@
-.home{
-    width:80vw;
-    height: 40vh;
+.homes{
+    width:60vw;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly; 
+    margin-inline: 20%;
+}
+.homimg{
+    width: 500px;
+    height: 500px;
 }
 /* @media screen and (max-width=545) {
     .home{

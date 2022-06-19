@@ -1,5 +1,5 @@
 .component-box{
-    height: 330px;
+    height: fit-content;
     width: 330px;
     background-color: white;
     border: 8px solid rgb(199, 198, 198);
@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 5vh 0px;
 }
 .options-box{
     display: flex;
@@ -49,8 +50,6 @@
 a:hover{
     font-size: 17px;
 }
-@media screen and (max-width:375px){
-    .component-box{
-        
-    }
+a{
+    margin-bottom: 2vh;
 }

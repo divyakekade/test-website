@@ -1,16 +1,22 @@
 import "./Home.css";
-import Navbar from "../Components/Navbar"
-
-function Home (){
-    return(
-        <div className="home">
-        <div className="home">
-        <Navbar />
-        </div>
-        <div className="h1">
-        <h1>Home page</h1>
-        </div>
-        </div>
+import {Link} from "react-router-dom";
+import Navbar from "../Components/Navbar";
+import Homescreen from '../Components/HomeScreen';
+function Home() {
+    return (
+        <div className='mainHom'>
+            
+            <Navbar/>
+            <div className="back-img">
+            <div className="homImg"  >
+            <img id="wceimg" src={require('../Images/walchand-college-of-engineering-sangli-walchand-college-002.jpg')} alt="logo" className="nav-logo"/>
+            </div>
+            <div className="hom">
+            <Homescreen/>
+            </div>
+            </div>
+        </div >
     )
 }
 export default Home;
+;

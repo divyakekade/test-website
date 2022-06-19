@@ -1,4 +1,4 @@
-.outer-box-white{
+.toggle-outer-box-white{
     width:144px;
     height:52px;
     border: none;
@@ -7,8 +7,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* padding-left: 7px;
+    padding-right: 7px; */
 }
-.inner-box-white{
+.toggle-inner-box-white{
     width:130px;
     height: 40px;
     border: none;
@@ -18,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;;
+    cursor: pointer;
 }
 .inner-box-white:hover{
     font-size: 18px;
