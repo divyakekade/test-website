@@ -8,14 +8,18 @@ import SidebarStudent from "./SidebarStudent";
 import SidebarFaculty from "./SidebarFaculty";
 // import SidebarFaculty from "./SidebarFaculty";
 // import {ReactComponent as DropdownIcon} from "../Icons/dropdown-icon.svg";
-export default function Navbar2(){
+export default function Navbar2({role}){
     const [sidebar, setSidebar]=React.useState(false)
     function showSidebar(){
         setSidebar((prevState)=>!prevState)
     }
     function displaySidebar(){
-        if(sidebar===true) {return <SidebarFaculty/>}
-    }
+        if(sidebar===true){
+        if(role==="Student") {
+            return <SidebarStudent/>}
+        else{
+            return <SidebarFaculty/>}
+    }}
     return(
         <>
         <nav className="navbar2">
