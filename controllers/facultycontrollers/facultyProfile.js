@@ -1,4 +1,4 @@
-const { sendtoken } = require("../../utility/cockietoken");
+const { sendtoken, sendtokenfaculty } = require("../../utility/cockietoken");
 const { sendEmail } = require("../../utility/passwordResetEmail")
 Faculty = require("../../models/teacherprofile");
 exports.facultysignup = async (req, res) => {
@@ -13,24 +13,25 @@ exports.facultysignup = async (req, res) => {
         phoneNumber,
         coursestought
     })
-    sendtoken(res, 201, faculty)
+    sendtokenfaculty(res, 201, faculty)
 
 }
+
 exports.facultyLogin = async (req, res, next) => {
     // getting  details from request
     const { email, password } = req.body;
     if (!email || !password) {
         return res.status(400).json({
             succses: false,
-            msg: "not student"
+            msg: "not faculty"
         })
     }
     // find user with email
-    const faculty = await faculty.findOne({ email }).select("+password");
+    const faculty = await Faculty.findOne({ email }).select("+password");
     if (!faculty) {
         return res.status(400).json({
             succses: false,
-            msg: "not student"
+            msg: "not faculty"
         })
     }
     //check password is matchend or not 
@@ -39,10 +40,10 @@ exports.facultyLogin = async (req, res, next) => {
     if (!isPasswordMatched) {
         return res.status(400).json({
             succses: false,
-            msg: "not student"
+            msg: "not faculty"
         })
     }
-    sendtoken(res, 201, student)
+    sendtokenfaculty(res, 201, faculty)
 
 }
 exports.logout = async (req, res, next) => {
