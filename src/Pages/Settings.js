@@ -9,7 +9,7 @@ function Settings(){
     return(
     <>
     <div className='page'>
-    <Navbar2 role={role.role.role}/>
+    <Navbar2 role={role.role.role}/>   
     <div className='outer-box'>
         <div className='settings-title'><p className='option-name'>Settings</p></div>
         <Link to="/"><div className='option'><LogoutIcon className="option-icon"/><p className='option-name'>Logout</p></div></Link>

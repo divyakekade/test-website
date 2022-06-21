@@ -45,7 +45,7 @@ export default function SetQuestions(){
                 <span>
                     <div><OptionBoxBlue name="Set Paper"/></div>
                 </span>
-    </div>
+    </div> 
     <form className='question'>
         <input id="queno"onChange={handleChanges} placeholder='Question number' type="number" className='que-text'/>
         <input id="que"placeholder='Type the question here' onChange={handleChanges} type="text" className='que-text'/>
