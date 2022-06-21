@@ -12,7 +12,7 @@ exports.studentsignup = async (req, res) => {
         prn,
         phoneNumber
     })
-    sendtoken(res, 201, student)
+    sendtoken(res, 201, student);
 
 }
 exports.studentLogin = async (req, res, next) => {

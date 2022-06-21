@@ -1,33 +1,37 @@
-const mongoose = require("mongoose"); 
+const mongoose = require("mongoose");
 
 const questionPaperSchema = new mongoose.Schema({
     subject: {
         type: String,
-        required:[true,"Please enter subject"],
+        required: [true, "Please enter subject"],
     },
     name: {
-        type:string
+        type: String,
+        required: [true, "Please enter name "]
     },
     question: [
         {
             questionTitle: {
-              type:string
+                type: String
+            },
+            typeOfQuestion: {
+                type:String
             },
             option1: {
-                type:string
+                type: String
             },
             option2: {
-                type: string
+                type: String
             },
             option3: {
-                type: string
+                type: String
             },
             option4: {
-                type: string
+                type: String
             },
             marks: {
                 type: Number,
-                required:[,"Ente the marks of student "]
+                required: [, "Ente the marks of student "]
             }
 
         }
@@ -37,16 +41,21 @@ const questionPaperSchema = new mongoose.Schema({
     image: [
         {
             public_key: {
-                type:String 
+                type: String
             },
             url: {
-                type:String
+                type: String
             }
         }
     ],
     marks: {
         type: Number,
-      required:[true,"Please add marks "]  
+        required: [true, "Please add marks "]
+    },
+    teacher: {
+        type: mongoose.Schema.ObjectId,
+        ref: "facultyProfile",
+        required: true
     }
 })
 

@@ -7,6 +7,7 @@ const { isfacultyauthenticate, isauthenticate } = require("../middleware/authent
 Router.route("/signup").post(facultysignup);
 Router.route("/login").post(facultyLogin)
 Router.route("/logout").get(isfacultyauthenticate, logout);
+
 // Router.route("/setexam").get(isauthenticate,sendSubject)
 
 
