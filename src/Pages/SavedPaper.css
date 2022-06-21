@@ -63,32 +63,6 @@
     margin-bottom: 3vh;
     align-self: flex-start;
 }
-.img-button{
-    width:180px;
-    height: 36px;
-    background-color: white;
-    color:#282b77;
-    border:none;
-    font-size: 18px;
-    font-family: Verdana;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px gray;
-    cursor: pointer;
-    align-self: flex-start;
-    margin: 3vh 0px;
-}
-.img-button:hover{
-    font-size: 20px;
-}
-.opts-list{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    height: fit-content;
-}
 .two-buttons{
     width: fit-content;
     /* padding: 0px 2vw; */
@@ -97,7 +71,14 @@
     justify-content: space-between;
     /* background-color: aqua; */
 }
-.add-que-button{
+.add-img-span{
+    display: inline;
+}
+.add-img-label{
+    font-family: "Verdana";
+    font-size: 20px;
+}
+.edit-button{
     width:200px;
     height: 38px;
     background-color: #282b77;
@@ -109,32 +90,7 @@
     box-shadow: 2px 2px 4px gray;
     cursor: pointer;
 }
-.add-que-button:hover{
+.edit-button:hover{
     font-size: 20px;
     background-color: rgb(17, 10, 52);
 }
-.ques-name-set-btn{
-    width:200px;
-    height: 38px;
-    background-color: #282b77;
-    color:white;
-    border:none;
-    font-size: 18px;
-    font-family: Verdana;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px gray;
-    cursor: pointer;
-}
-.ques-name-set-btn:hover{
-    font-size: 20px;
-    background-color: rgb(17, 10, 52);
-}
-input[type=file]::file-selector-button {
-    border: 2px solid ;
-    padding: 7px;
-    border-radius: 5px;
-    background-color: #282b77;
-    transition: 1s;
-    color: white;
-    margin-bottom: 15px;
-  }

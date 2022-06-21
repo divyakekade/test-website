@@ -20,7 +20,7 @@ export default function CheckPaper(){
                     <div><OptionBoxBlue name="Answersheets"/></div>
                 </span>
                 </Link>
-                <Link to="/absentStudents">
+                <Link to="/absentstudents">
                 <span>
                     <div><OptionBoxWhite name="Absent students"/></div>
                 </span>

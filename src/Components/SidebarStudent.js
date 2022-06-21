@@ -8,7 +8,7 @@ import { ReactComponent as ExamIcon } from "../Icons/exam-icon.svg";
 import { ReactComponent as ResultIcon } from "../Icons/result-icon.svg";
 import { ReactComponent as SettingsIcon } from "../Icons/setting-icon.svg";
 import { ReactComponent as MenuIcon } from "../Icons/menu-icon-white.svg";
-function SidebarStudent() {
+function SidebarStudent({role}) {
   const [sidebar,setSidebar]=React.useState(true)
   function showSidebar(){
     setSidebar((prevState)=>!prevState)
@@ -21,7 +21,7 @@ function SidebarStudent() {
           <MenuIcon onClick={showSidebar}/>
         </div>
         <li>
-          <Link to="/studentDashboard">
+          <Link to="/studentdashboard">
           <span className="options">
             <HomeIcon />
             <p>Dashboard</p>
@@ -53,7 +53,7 @@ function SidebarStudent() {
           {/* </Link> */}
         </li>
         <li>
-          <Link to="/results">
+          <Link to="/results" state={{role:{role}}}>
           <span className="options">
             <ResultIcon />
             <p>Result</p>
@@ -61,7 +61,7 @@ function SidebarStudent() {
           </Link>
         </li>
         <li>
-          <Link to="/settings">
+          <Link to="/settings" state={{role:{role}}}>
           <span className="options">
             <SettingsIcon />
             <p>Settings</p>

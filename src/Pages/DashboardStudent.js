@@ -6,7 +6,6 @@ import {ReactComponent as UpcomingExamsIcon} from "../Icons/upcoming-exam-icon.s
 import {ReactComponent as NotesIcon} from "../Icons/note-icon-blue.svg";
 import {ReactComponent as ListIcon} from "../Icons/list-icon.svg";
 function DashboardStundent(){
-    
     return(
     <>
     <div className='page'>

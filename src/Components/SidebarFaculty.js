@@ -8,7 +8,7 @@ import { ReactComponent as ExamIcon } from "../Icons/exam-icon.svg";
 import { ReactComponent as ResultIcon } from "../Icons/result-icon.svg";
 import { ReactComponent as SettingsIcon } from "../Icons/setting-icon.svg";
 import { ReactComponent as MenuIcon } from "../Icons/menu-icon-white.svg";
-function SidebarFaculty() {
+function SidebarFaculty({role}) {
   const [sidebar,setSidebar]=React.useState(true)
   function showSidebar(){
     setSidebar((prevState)=>!prevState)
@@ -21,7 +21,7 @@ function SidebarFaculty() {
           <MenuIcon onClick={showSidebar}/>
         </div>
         <li>
-          <Link to="/facultyDashboard">
+          <Link to="/facultydashboard">
           <span className="options">
             <HomeIcon />
             <p>Dashboard</p>
@@ -45,7 +45,7 @@ function SidebarFaculty() {
           {/* </Link> */}
         </li>
         <li>
-          <Link to="/setExamPaper">
+          <Link to="/setexampaper">
           <span className="options">
             <ExamIcon />
             <p>Set Exam</p>
@@ -53,7 +53,7 @@ function SidebarFaculty() {
           </Link>
         </li>
         <li>
-          <Link to="/checkPaper">
+          <Link to="/checkpaper">
           <span className="options">
             <ResultIcon />
             <p>Check Paper</p>
@@ -61,7 +61,7 @@ function SidebarFaculty() {
           </Link>
         </li>
         <li>
-          <Link to="/settings">
+          <Link to="/settings" state={{role:{role}}}>
           <span className="options">
             <SettingsIcon />
             <p>Settings</p>

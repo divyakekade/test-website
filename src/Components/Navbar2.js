@@ -16,9 +16,9 @@ export default function Navbar2({role}){
     function displaySidebar(){
         if(sidebar===true){
         if(role==="Student") {
-            return <SidebarStudent/>}
+            return <SidebarStudent role={role}/>}
         else{
-            return <SidebarFaculty/>}
+            return <SidebarFaculty role={role}/>}
     }}
     return(
         <>

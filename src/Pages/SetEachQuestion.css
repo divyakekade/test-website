@@ -19,14 +19,6 @@
     padding-top: 5.5vh;
     padding-bottom: 5.5vh;
 }
-.set-exam-options-box{
-    display: flex;
-    width: 324px;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
 .question{
     display: flex;
     align-items: center;

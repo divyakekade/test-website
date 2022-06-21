@@ -1,11 +1,13 @@
 import React from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import OptionBoxBlue from "./OptionBoxBlue";
 import OptionBoxWhite from "./OptionBoxWhite";
 import BlueButton from "./BlueButton";
 import "./SignupLogin.css";
 export default function SignUpLogin({role}){
+    let navigate=useNavigate()
     const [formData1,setFormData1]=React.useState({
         "name":"",
         "prn":"",
@@ -46,8 +48,18 @@ export default function SignUpLogin({role}){
         console.log(error);
       })
       .then(function () {});
-    }
 
+      navigate("/studentdashboard")
+    }
+    // function submitData() {
+    //     // const article = { title: 'React POST Request Example' };
+    //     axios.post('https://reqres.in/invalid-url', formData1)
+    //         .then(response => console.log(response))
+    //         .catch(error => {
+    //             this.setState({ errorMessage: error.message });
+    //             console.error('There was an error!', error);
+    //         });
+    // }
     const [choice,setChoice]=React.useState("Sign up")
     function toggleToLogin(){
         setChoice("Log in")
@@ -74,7 +86,7 @@ export default function SignUpLogin({role}){
             <input type="email" id="email" onChange={(e)=>handleChangeS(e)} placeholder="email" className="login-input"></input>
             <input type="text" id="mobile" onChange={(e)=>handleChangeS(e)} placeholder="mobile number" className="login-input"></input>
             <input type="password" id="password" onChange={(e)=>handleChangeS(e)} placeholder="password" className="login-input"></input>
-            <Link to="/studentDashboard" ><div onClick={getData} type="submit"><BlueButton className="button" title={choice} /></div></Link>
+           {/*<Link to="/studentdashboard" >*/}<button className="signup-button" onClick={getData} type="submit">Sign up</button>{/*</Link>*/}
             </form>
         </div>
         </>
@@ -96,7 +108,7 @@ export default function SignUpLogin({role}){
             <input type="email" id="email" onChange={(e)=>handleChangeS(e)} placeholder="email" className="login-input"></input>
             <input type="text" id="mobile" onChange={(e)=>handleChangeS(e)} placeholder="mobile number" className="login-input"></input>
             <input type="password" id="password" onChange={(e)=>handleChangeS(e)} placeholder="password" className="login-input"></input>
-            <Link to="/facultyDashboard" ><div type="submit" onClick={getData}><BlueButton className="button" title={choice} /></div></Link>
+            <Link to="/facultydashboard" ><button className="signup-button" onClick={getData} type="submit">Sign up</button></Link>
             </form>
         </div>
         </>
@@ -118,9 +130,7 @@ export default function SignUpLogin({role}){
         <form className="form">
         <input type="text" id="email" onChange={(e)=>handleChangeL(e)} placeholder="email" className="login-input"></input>
         <input type="password" id="password" onChange={(e)=>handleChangeL(e)} placeholder="password" className="login-input"></input>
-        <Link to={role==="Faculty"?"/facultyDashboard":"/studentDashboard"} state={{role:{role}}}>
-            <div type="submit" onClick={getData}><BlueButton className="button" title={choice} /></div>
-            </Link>
+        <Link to={role==="Faculty"?"/facultydashboard":"/studentdashboard"} state={{role:{role}}}><button className="signup-button" onClick={getData} type="submit">Log in</button></Link>
         </form>
         <a href="" className="forgot-pasword">Forgot Password?</a>
     </div>
