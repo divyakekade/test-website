@@ -1,7 +1,7 @@
 import "./Home.css";
 import Navbar from "../Components/Navbar";
 import React from "react";
-import Homescreen from '../Components/HomeScreen';
+import HomeScreen from '../Components/HomeScreen';
 function Home() {
     return (
         <div className='mainHom'>
@@ -12,7 +12,7 @@ function Home() {
             <img id="wceimg" src={require('../Images/walchand-college-of-engineering-sangli-walchand-college-002.jpg')} alt="logo" className="nav-logo"/>
             </div>
             <div className="hom">
-            <Homescreen/>
+            <HomeScreen/>
             </div>
             </div>
         </div >

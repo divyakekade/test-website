@@ -14,6 +14,8 @@ import DashboardStudent from '../Pages/DashboardStudent';
 import Results from '../Pages/Results';
 import SavedPaper from "../Pages/SavedPaper";
 import SetEachQuestion from "../Pages/SetEachQuestion";
+import EnrolledList from "../Pages/EnrolledList";
+import EnrollStudent from "../Pages/EnrollStudent";
 function App() {
   return (
     <div className="App"> 
@@ -33,6 +35,8 @@ function App() {
       <Route exact path='/setnewpaper/:id' element={<SetQuestions/>}/>
       <Route exact path='/savedpaper/:id' element={<SavedPaper/>}/>
       <Route exact path='/setquestions/:id/:id' element={<SetEachQuestion/>}/>
+      <Route exact path='/addedlist/:id/:id' element={<EnrolledList/>}/>
+      <Route exact path='/enroll' element={<EnrollStudent/>}/>
       </Routes>
       </Router>
     </div>

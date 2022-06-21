@@ -12,6 +12,7 @@ function DashboardFaculty(){
     <div className='page'>
     <Navbar2 role="Faculty"/>
     <div className='outer-box'>
+        <Link to="/enroll"><div className='option'><LiveExamIcon className="option-icon"/><p className='option-name'>Enroll student to course</p></div></Link>
         <div className='option'><LiveExamIcon className="option-icon"/><p className='option-name'>Live Exam</p></div>
         <div className='option'><UpcomingExamsIcon className="option-icon"/><p className='option-name'>Upcoming Exams</p></div>
         <div className='option'><CalendarIcon className="option-icon"/><p className='option-name'>Set Exam Time</p></div>
