@@ -16,6 +16,10 @@ import SavedPaper from "../Pages/SavedPaper";
 import SetEachQuestion from "../Pages/SetEachQuestion";
 import EnrolledList from "../Pages/EnrolledList";
 import EnrollStudent from "../Pages/EnrollStudent";
+import ViewPdf from "../Pages/ViewPdf";
+import NotesPageFaculty from "../Pages/NotesPageFaculty";
+import NotesPageStudent from "../Pages/NotesPageStudent";
+import ViewFile from "../Pages/ViewFile";
 function App() {
   return (
     <div className="App"> 
@@ -37,6 +41,10 @@ function App() {
       <Route exact path='/setquestions/:id/:id' element={<SetEachQuestion/>}/>
       <Route exact path='/addedlist/:id/:id' element={<EnrolledList/>}/>
       <Route exact path='/enroll' element={<EnrollStudent/>}/>
+      <Route exact path='/viewpdf' element={<ViewPdf/>}/>
+      <Route exact path="/uploadnotes" element={<NotesPageFaculty/>}/>
+      <Route exact path="/notes" element={<NotesPageStudent/>}/>
+      <Route exact path="/viewfile" element={<ViewFile/>}/>
       </Routes>
       </Router>
     </div>

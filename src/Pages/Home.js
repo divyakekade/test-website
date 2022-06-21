@@ -9,7 +9,7 @@ function Home() {
             <Navbar/>
             <div className="back-img">
             <div className="homImg"  >
-            <img id="wceimg" src={require('../Images/walchand-college-of-engineering-sangli-walchand-college-002.jpg')} alt="logo" className="nav-logo"/>
+            <img id="wceimg" src={require('../Images/walchand-college-of-engineering-sangli-walchand-college-002.jpg')} alt="logo" className="wce-img"/>
             </div>
             <div className="hom">
             <HomeScreen/>

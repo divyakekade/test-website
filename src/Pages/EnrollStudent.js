@@ -13,8 +13,6 @@ export default function EnrollStudent(){
         newStudData[e.target.id]=e.target.value
         setStudData(newStudData)
     }
-    console.log(studData.subj)
-    console.log(studData.prn)
     return (
         <>
     <div className='enroll-page'>

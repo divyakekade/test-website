@@ -37,12 +37,12 @@ function SidebarStudent({role}) {
           {/* </Link> */}
         </li>
         <li>
-          {/* <Link> */}
+          <Link to="/notes">
           <span className="options">
             <NotesIcon />
             <p>Notes</p>
           </span>
-          {/* </Link> */}
+          </Link>
         </li>
         <li>
           {/* <Link> */}

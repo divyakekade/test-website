@@ -9,35 +9,33 @@ import SavedPaper from './SavedPaper';
 export default function SetQuestions(){
     // const RouterContext=React.createContext()
     const addr=useLocation().pathname;
-    console.log(addr)
     const [queType, setQueType]=React.useState("Type of Question")
-    const [queData,setQueData]=React.useState({"queno":0,"que":"","quetype":"","marks":0})
+    const [image,setImage]=React.useState("")
+    const [queData,setQueData]=React.useState({"queno":0,"que":"","marks":0,"option1":"","option2":"","option3":"","option4":""})
     function handleChanges(e){
         const newQueData={...queData}
         newQueData[e.target.id]=e.target.value
         setQueData(newQueData)
     }
-    // const [ques,setQues]=React.useState("Set Question")
-    // function toggleQuesToList(){
-    //     setQues("Paper")
-    // }
-    // function toggleQuesToSet(){
-    //     setQues("Set Question")
-    // }
-    function changeQueType(e){
+    function handleImage(e){
+        if(e.target.files && e.target.files[0]){
+            let pic=e.target.files[0]
+            setImage({image:URL.createObjectURL(pic)})
+        }
+    }
+    function handleQueType(e){
         setQueType(e.target.value)
     }
     function displayopts1(){
         if(queType==="MCQ"){
         return(
         <div className='opts-list'>
-        <input placeholder='Enter Option 1' type="text" className='que-text'/>
-        <input placeholder='Enter Option 2' type="text" className='que-text'/>
-        <input placeholder='Enter Option 3' type="text" className='que-text'/>
-        <input placeholder='Enter Option 4' type="text" className='que-text'/>
+        <input id="option1" placeholder='Enter Option 1' onChange={handleChanges} type="text" className='que-text'/>
+        <input id="option2" placeholder='Enter Option 2' onChange={handleChanges} type="text" className='que-text'/>
+        <input id="option3" placeholder='Enter Option 3' onChange={handleChanges} type="text" className='que-text'/>
+        <input id="option4" placeholder='Enter Option 4' onChange={handleChanges} type="text" className='que-text'/>
         </div>)}
-    }
-    // if(ques==="Set Question")
+    } 
     return (
         <>
     <div className='set-exam-page'>
@@ -47,28 +45,24 @@ export default function SetQuestions(){
                 <span>
                     <div><OptionBoxBlue name="Set Paper"/></div>
                 </span>
-                {/* <span>
-                    <Link to="savedPaper"><div ><OptionBoxWhite name="Saved Paper" /></div></Link>
-                </span> */}
     </div>
     <form className='question'>
         <input id="queno"onChange={handleChanges} placeholder='Question number' type="number" className='que-text'/>
-        <input id="que"placeholder='Type the question here' type="text" className='que-text'/>
-        <select id="quetype"value={queType} className='que-text' onChange={changeQueType}>
+        <input id="que"placeholder='Type the question here' onChange={handleChanges} type="text" className='que-text'/>
+        <select id="quetype"value={queType} className='que-text' onChange={handleQueType}>
             <option>Type of Question</option>
             <option>Descriptive</option>
             <option>MCQ</option>
         </select>
-        <input id="marks"placeholder='Marks of question' type="number" className='que-text'/>
+        <input id="marks"placeholder='Marks of question'onChange={handleChanges} type="number" className='que-text'/>
         <span className='add-img-span'>
         <label className='add-img-label'>Add image:  </label>
-        <input type="file" placeholder="Add Image" />
+        <input type="file" placeholder="Add Image" onChange={handleImage} />
         </span>
         {displayopts1()}
         <button className="add-que-button">Save Question</button>
     </form>
     <div className='two-buttons'>
-        {/* <div><BlueButton className="edit-button" title="Add Question"/></div> */}
         <Link to={"/savedpaper/"+queData.queno}><BlueButton className="edit-button" title="Save Paper"/></Link>
     </div>
     </div>

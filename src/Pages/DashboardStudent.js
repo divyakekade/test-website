@@ -13,7 +13,7 @@ function DashboardStundent(){
     <div className='outer-box'>
         <div className='option'><LiveExamIcon className="option-icon"/><p className='option-name'>Live Exam</p></div>
         <div className='option'><UpcomingExamsIcon className="option-icon"/><p className='option-name'>Upcoming Exams</p></div>
-        <div className='option'><NotesIcon className="option-icon"/><p className='option-name'>Recently Uploaded Notes</p></div>
+        <Link to="/viewpdf"><div className='option'><NotesIcon className="option-icon"/><p className='option-name'>Recently Uploaded Notes</p></div></Link>
         <div className='option'><ListIcon className="option-icon"/><p className='option-name'>Your Courses</p></div>
     </div>
     </div>

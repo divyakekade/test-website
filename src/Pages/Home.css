@@ -1,29 +1,40 @@
 .mainHom{
-    height: 720px;
+    /* height: 720px; */
+    height: 80vh;
     width: 100%;
     display: inline-block;
     flex-direction: column;
     align-items: center;
-
 }
 
 .back-img{
-        background-image: url("../Images/blue-abstract.jpg");
+    margin:0;
+    height:80vh;
+    background-image: url("../Images/blue-gradient-blank-background-business_53876-120508.png");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
 }
-
+/* "../Images/blue-abstract.jpg" */
 .homImg{
-margin-top: 20px;
+/* margin-top: 20px; */
 display: flex;
 flex-direction: column;
 align-items: center;
 }
 
-#wceimg{
+/* #wceimg{
     border-radius: 5px;
     height: 200px;
     width: 300px;
+} */
+.wce-img{
+    margin-top:10vh;
+    border-radius: 5px;
+    /* height: 275px; */
+    /* width: 450px; */
+    height:20vw;
+    width: 30vw;
 }
+

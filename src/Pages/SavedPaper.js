@@ -35,7 +35,7 @@ export default function SavedPaper(){
         <img className='que-img'/>
         {/* {displayopts2()} */}
         <div className='two-buttons'>
-        <Link to="/savedpaper"><BlueButton className="edit-button" title="Edit"/></Link>
+        <BlueButton className="edit-button" title="Edit"/>
         <BlueButton className="edit-button" title="Delete"/>
         </div>
     </div>
